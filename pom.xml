@@ -3,10 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>dev</groupId>
-    <artifactId>m</artifactId>
+    <groupId>m</groupId>
+    <artifactId>dev</artifactId>
     <version>1</version>
-
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>localhost</id>
+            <name>wildfly</name>
+            <url>file://C:\mvnrepository</url>
+        </repository>
+        <site>
+            <id>localhost</id>
+            <url>file://C:\mvnrepository\m\dev\1</url>
+        </site>
+    </distributionManagement>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 </project>
