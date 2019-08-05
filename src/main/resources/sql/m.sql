@@ -168,3 +168,61 @@ SELECT *
 FROM customers
 WHERE ROWNUM <= 3;
 
+SELECT *
+FROM customers
+WHERE country = 'Germany'
+  AND ROWNUM <= 3;
+
+SELECT MIN(price) AS smallestprice
+FROM products;
+
+SELECT MAX(price) AS largestprice
+FROM products;
+
+SELECT MIN(price)
+FROM products;
+
+SELECT COUNT(productid)
+FROM products;
+
+SELECT AVG(price)
+FROM products;
+
+SELECT SUM(quantity)
+FROM orderdetails;
+
+SELECT COUNT(*)
+FROM products
+WHERE price = 18;
+
+SELECT *
+FROM customers
+WHERE customername LIKE 'a%';
+
+SELECT *
+FROM customers
+WHERE customername LIKE '%a';
+
+SELECT *
+FROM customers
+WHERE customername LIKE '%or%';
+
+SELECT *
+FROM customers
+WHERE customername LIKE '_r%';
+
+SELECT *
+FROM customers
+WHERE customername LIKE 'a__%';
+
+SELECT *
+FROM customers
+WHERE contactname LIKE 'a%o';
+
+SELECT *
+FROM customers
+WHERE customername NOT LIKE 'a%';
+
+SELECT *
+FROM customers
+WHERE city LIKE 'a%';
