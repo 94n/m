@@ -5,10 +5,25 @@ import static java.time.temporal.ChronoUnit.MINUTES;
 
 public final class Time {
 
-    private static final LocalTime START = LocalTime.parse("14:10");
+    private static final String DURATION = "04:33:04";
+
+    private static final String START = "09:37";
 
     public static void main(final String[] args) {
-        System.out.println(("Time after " + LocalTime.parse("04:33:04") + "\n") + START.plus(LocalTime.parse("04:33:04").getHour(), HOURS).plus(LocalTime.parse("04:33:04").getMinute(), MINUTES));
+        LocalTime localTimeAfterDuration = LocalTime.parse(START).plus(LocalTime.parse(DURATION).getHour(), HOURS).plus(LocalTime.parse(DURATION).getMinute(), MINUTES);
+        System.out.println(Messages.PREFIX.text + LocalTime.parse(DURATION) + "\n" + localTimeAfterDuration);
+    }
+
+    private enum Messages {
+
+        PREFIX("Time after ");
+
+        private String text;
+
+        Messages(String text) {
+            this.text = text;
+        }
+
     }
 
 }
