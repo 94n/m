@@ -7,7 +7,7 @@ public final class Time {
 
     private static final String DURATION = "04:33:04";
 
-    private static final String START = "09:37";
+    private static final String START = "11:42";
 
     public static void main(final String[] args) {
         LocalTime localTimeAfterDuration = LocalTime.parse(START).plus(LocalTime.parse(DURATION).getHour(), HOURS).plus(LocalTime.parse(DURATION).getMinute(), MINUTES);

@@ -1,4 +1,4 @@
-package springboot;
+package spring;
 
 public class ConsoleHelloService implements HelloService {
 

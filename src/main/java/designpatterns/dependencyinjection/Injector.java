@@ -1,14 +1,13 @@
 package designpatterns.dependencyinjection;
 
 public class Injector {
+
     public static void main(String[] args) {
-        // Build the dependencies first
-        Service service = new ExampleService();
+        // Construction code.
+        Greeter greeter = new Greeter(System.out); // This may be many lines that connect many objects
 
-        // Inject the service, constructor style
-        Client client = new Client(service);
-
-        // Use the objects
-        System.out.println(client.greet());
+        // Behavior code.
+        greeter.greet(); // This is one call to one method on one object in the object graph
     }
+
 }

@@ -1,4 +1,4 @@
-package springboot;
+package spring;
 
 public interface HelloService {
     void sayHello(String name);
