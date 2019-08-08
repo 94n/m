@@ -1,15 +1,10 @@
 package mypack;
 
-public class Person {
-    private String name; // private = restricted access
+abstract class Person {
 
-    // Getter
-    public String getName() {
-        return name;
-    }
+    public String fname = "John";
 
-    // Setter
-    public void setName(String newName) {
-        this.name = newName;
-    }
+    public int age = 24;
+
+    public abstract void study(); // abstract method
 }

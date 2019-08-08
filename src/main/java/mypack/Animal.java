@@ -1,9 +1,7 @@
 package mypack;
 
-abstract class Animal {
-    public abstract void animalSound();
+interface Animal {
+    public void animalSound();
 
-    public void sleep() {
-        System.out.println("Zzz");
-    }
+    public void sleep(); // interface method (does not have a body)
 }
